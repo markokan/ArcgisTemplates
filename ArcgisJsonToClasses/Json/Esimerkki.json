@@ -1,0 +1,133 @@
+{
+ "currentVersion": 10.21,
+ "id": 0,
+ "name": "muokattava",
+ "type": "Feature Layer",
+ "description": "",
+ "copyrightText": "",
+ "defaultVisibility": true,
+ "editFieldsInfo": null,
+ "ownershipBasedAccessControlForFeatures": null,
+ "syncCanReturnChanges": false,
+ "relationships": [],
+ "isDataVersioned": false,
+ "supportsRollbackOnFailureParameter": true,
+ "supportsStatistics": true,
+ "supportsAdvancedQueries": true,
+ "geometryType": "esriGeometryPolygon",
+ "minScale": 0,
+ "maxScale": 0,
+ "extent": {
+  "xmin": 2.24652277847E7,
+  "ymin": 6808305.9369,
+  "xmax": 2.25214931674E7,
+  "ymax": 6849478.803599999,
+  "spatialReference": {
+   "wkid": 3876,
+   "latestWkid": 3876
+  }
+ },
+ "drawingInfo": {
+  "renderer": {
+   "type": "simple",
+   "symbol": {
+    "type": "esriSFS",
+    "style": "esriSFSSolid",
+    "color": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "outline": {
+     "type": "esriSLS",
+     "style": "esriSLSSolid",
+     "color": [
+      245,
+      245,
+      122,
+      255
+     ],
+     "width": 0.4
+    }
+   },
+   "label": "",
+   "description": ""
+  },
+  "transparency": 0,
+  "labelingInfo": null
+ },
+ "hasM": false,
+ "hasZ": false,
+ "allowGeometryUpdates": true,
+ "hasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "objectIdField": "OBJECTID",
+ "globalIdField": "",
+ "displayField": "Piirinimi",
+ "typeIdField": "",
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null,
+   "editable": false,
+   "nullable": false
+  },
+  {
+   "name": "ID",
+   "type": "esriFieldTypeDouble",
+   "alias": "ID",
+   "domain": null,
+   "editable": true,
+   "nullable": true
+  },
+  {
+   "name": "color",
+   "type": "esriFieldTypeInteger",
+   "alias": "color",
+   "domain": null,
+   "editable": true,
+   "nullable": true
+  },
+  {
+   "name": "Piirinimi",
+   "type": "esriFieldTypeString",
+   "alias": "Piirinimi",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 50
+  },
+  {
+   "name": "Hahmotelmanimi",
+   "type": "esriFieldTypeString",
+   "alias": "Hahmotelmanimi",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 50
+  }
+ ],
+ "types": [],
+ "templates": [
+  {
+   "name": "muokattava",
+   "description": "",
+   "prototype": {
+    "attributes": {
+     "Hahmotelmanimi": null,
+     "ID": null,
+     "color": null,
+     "Piirinimi": null
+    }
+   },
+   "drawingTool": "esriFeatureEditToolPolygon"
+  }
+ ],
+ "maxRecordCount": 1000,
+ "supportedQueryFormats": "JSON, AMF",
+ "capabilities": "Create,Query,Update,Delete,Uploads,Editing",
+ "useStandardizedQueries": true
+}

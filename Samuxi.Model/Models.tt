@@ -1,0 +1,85 @@
+<#@ template language="C#" hostspecific="true"  debug="True" #>
+<#@ output extension="cs" #>
+<#@ assembly name="$(SolutionDir)Samuxi.ArcgisUtil.Json\bin\Debug\Samuxi.ArcgisUtil.Json.dll" #>
+<#@ include file="T4Toolbox.tt" #>
+<#@ import Namespace="System.Collections.Generic" #>
+<#@ import Namespace="Samuxi.ArcgisUtil.Json" #>
+<# 	IList<ArcgisObject> items = ArcgisJsonHelper.ReadDirectory(@"C:\\temp\json\"); #>
+<#@ include file="NamespaceScript.tt" #>
+using Catel.Data;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
+ 
+namespace <#=fileNamespace#>
+{
+  <#
+	foreach (var item in items)
+	{#>
+
+	[Serializable]
+	public class <#= item.JsonArcgisObject.name #> : ModelBase
+	{
+		#region Properties
+        
+		<#foreach (var field in item.JsonArcgisObject.fields) { #>
+		<#if (field.nullable && field.CodeType != "string") { #>
+		
+		public <#= field.CodeType #>? <#= field.name #> 
+		{
+            get { return GetValue<<#= field.CodeType #>?>(<#= field.name #>Property); }
+            set { SetValue(<#= field.name #>Property, value); }
+        }
+		public static readonly PropertyData <#= field.name #>Property = RegisterProperty("<#= field.name #>", typeof(<#= field.CodeType #>?), null);
+		<# } else {#>
+		
+		public <#= field.CodeType #> <#= field.name #> 
+		{
+            get { return GetValue<<#= field.CodeType #>>(<#= field.name #>Property); }
+            set { SetValue(<#= field.name #>Property, value); }
+        }
+		public static readonly PropertyData <#= field.name #>Property = RegisterProperty("<#= field.name #>", typeof(<#= field.CodeType #>), null);
+		<#}#>
+		<#}#>
+		
+		#endregion
+
+		#region Constructor
+
+		public <#= item.JsonArcgisObject.name #>()
+		{ 
+		}
+
+		/// <summary>
+		/// Initializes a new object based on <see cref="SerializationInfo"/>.
+		/// </summary>
+		/// <param name="info"><see cref="SerializationInfo"/> that contains the information.</param>
+		/// <param name="context"><see cref="StreamingContext"/>.</param>
+		protected <#= item.JsonArcgisObject.name #>(SerializationInfo info, StreamingContext context): base(info, context) { }
+
+		#endregion
+
+		#region Methods
+		/// <summary>
+		/// Validates the field values of this object. Override this method to enable
+		/// validation of field values.
+		/// </summary>
+		/// <param name="validationResults">The validation results, add additional results to this list.</param>
+		protected override void ValidateFields(List<IFieldValidationResult> validationResults)
+		{
+		}
+
+		/// <summary>
+		/// Validates the field values of this object. Override this method to enable
+		/// validation of field values.
+		/// </summary>
+		/// <param name="validationResults">The validation results, add additional results to this list.</param>
+		protected override void ValidateBusinessRules(List<IBusinessRuleValidationResult> validationResults)
+		{
+		}
+		#endregion
+	}
+ <#}#>
+}
+ 

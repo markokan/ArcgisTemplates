@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samuxi.Example", "ArcgisJsonToClasses\Samuxi.Example.csproj", "{A2920613-608D-4F27-8C41-355438E5134F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samuxi.ArcgisUtil.Json", "Samuxi.ArcgisUtil.Json\Samuxi.ArcgisUtil.Json.csproj", "{AA33CDF6-E4A6-430B-8E83-33623031A563}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samuxi.Model", "Samuxi.Model\Samuxi.Model.csproj", "{AC0610F5-B379-490E-A46C-02C9547876AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2920613-608D-4F27-8C41-355438E5134F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2920613-608D-4F27-8C41-355438E5134F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2920613-608D-4F27-8C41-355438E5134F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2920613-608D-4F27-8C41-355438E5134F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA33CDF6-E4A6-430B-8E83-33623031A563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA33CDF6-E4A6-430B-8E83-33623031A563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA33CDF6-E4A6-430B-8E83-33623031A563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA33CDF6-E4A6-430B-8E83-33623031A563}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC0610F5-B379-490E-A46C-02C9547876AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC0610F5-B379-490E-A46C-02C9547876AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC0610F5-B379-490E-A46C-02C9547876AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC0610F5-B379-490E-A46C-02C9547876AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
